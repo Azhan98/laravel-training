@@ -25,10 +25,12 @@ Route::post('/todo', function() {
 
     $data = request()->all();
 
+
+  
     validator($data, [
        'task' => ['required'],
        'date' => ['required']
-    ])->validate();
+    ])->validate()
 
     \App\Models\Todo::insert([
        'task' => $data['task'],
