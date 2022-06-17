@@ -25,6 +25,8 @@ Route::post('/todo', function() {
 
     $data = request()->all();
 
+
+  
     validator($data, [
        'task' => ['required'],
        'date' => ['required']
